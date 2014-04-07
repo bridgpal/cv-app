@@ -300,3 +300,178 @@ Migrating to AddExpiresAtToUsers (20140407034731)
   [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 5) LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:09:56 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$4G/AClfQiGiYKSKHj.Kw.OZuoNuxwDXSwagIEW0Jqd4cXs07/mQpG"], ["salt", "$2a$10$4G/AClfQiGiYKSKHj.Kw.O"], ["updated_at", Mon, 07 Apr 2014 07:09:56 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:10:02 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$tyO3RyC8BpnH18c1mi36QOB9OInqvaBNX8ErBk3pzr7WrL6fMbPLO"], ["salt", "$2a$10$tyO3RyC8BpnH18c1mi36QO"], ["updated_at", Mon, 07 Apr 2014 07:10:02 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:10:24 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$qABUIUYy2dn8zgyWgUEoh.6LgcF1LiFaRJTpmjMtRb.YnhDeiOMQW"], ["salt", "$2a$10$qABUIUYy2dn8zgyWgUEoh."], ["updated_at", Mon, 07 Apr 2014 07:10:24 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:10:32 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$.PtK9D1Chxe/NjW5Vyss4.a6YR02bH9xVkTHfpY3IRIcAQVwwg6Bq"], ["salt", "$2a$10$.PtK9D1Chxe/NjW5Vyss4."], ["updated_at", Mon, 07 Apr 2014 07:10:32 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (2.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.6ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:10:49 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$c.f5E8UUpOolV0v39yWteeAOnZ..d0OqRt2XB0Qv/4rpj6euQuu3."], ["salt", "$2a$10$c.f5E8UUpOolV0v39yWtee"], ["updated_at", Mon, 07 Apr 2014 07:10:49 UTC +00:00]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (3.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:10:52 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$2m.yPZN3ut9OMqd34e7bmORuERNd1BNEE1tXVVLi4kvXnbEGpV7xq"], ["salt", "$2a$10$2m.yPZN3ut9OMqd34e7bmO"], ["updated_at", Mon, 07 Apr 2014 07:10:52 UTC +00:00]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:11:03 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$ECPh2IKb9uhsVqFRYzZbrejbNJKPzUNR7JaVSAaQSmsBax9tXtve2"], ["salt", "$2a$10$ECPh2IKb9uhsVqFRYzZbre"], ["updated_at", Mon, 07 Apr 2014 07:11:03 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:11:37 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$IShVX7pFIx3WSTApfJaXbOc4NP2F8F3UM8In2QoAhwjuH86vubwsm"], ["salt", "$2a$10$IShVX7pFIx3WSTApfJaXbO"], ["updated_at", Mon, 07 Apr 2014 07:11:37 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:12:20 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$UuycndCUqxXom.Qho0.B4unmxnmVNX0qaOanP.4.RGp.Lz.XBLKWq"], ["salt", "$2a$10$UuycndCUqxXom.Qho0.B4u"], ["updated_at", Mon, 07 Apr 2014 07:12:20 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.8ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.3ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:19:39 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$8843nLmTdFUoU39Qqe.WQ.FZiO79i/43fkeSZpXFQ9rTuerq1.zEm"], ["salt", "$2a$10$8843nLmTdFUoU39Qqe.WQ."], ["updated_at", Mon, 07 Apr 2014 07:19:39 UTC +00:00]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.9ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.0ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (3.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:23:07 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$B5vtpH40HA5tgpNuvatv5.FiNmwUGFChKZL952oMgzSTMZsSdEHPu"], ["salt", "$2a$10$B5vtpH40HA5tgpNuvatv5."], ["updated_at", Mon, 07 Apr 2014 07:23:07 UTC +00:00]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harry@ga.co') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "code" = $1, "expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["code", "po7XnwHHcJUNuFiWDTR4XA"], ["expires_at", Mon, 07 Apr 2014 11:23:07 UTC +00:00], ["updated_at", Mon, 07 Apr 2014 07:23:07 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.2ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:23:23 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$qY/bLj16xrK17bZdDcWz.eQRRD2SGms7qMug9ThN3K3QKAslE/iNa"], ["salt", "$2a$10$qY/bLj16xrK17bZdDcWz.e"], ["updated_at", Mon, 07 Apr 2014 07:23:23 UTC +00:00]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harry@ga.co') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "code" = $1, "expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["code", "nlY5t1edKy3pCFtyGrtdIg"], ["expires_at", Mon, 07 Apr 2014 11:23:23 UTC +00:00], ["updated_at", Mon, 07 Apr 2014 07:23:23 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:23:48 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$D2KX0U/h0EdeNWwpYBmA8eMzhku5cqC4ZHZHQ99Cj23uugZV3.55q"], ["salt", "$2a$10$D2KX0U/h0EdeNWwpYBmA8e"], ["updated_at", Mon, 07 Apr 2014 07:23:48 UTC +00:00]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'harry@ga.co' LIMIT 1
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harry@ga.co') AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "users" SET "code" = $1, "expires_at" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["code", "CaDeRnQ41WfGAzqHM4a-7w"], ["expires_at", Mon, 07 Apr 2014 11:23:48 UTC +00:00], ["updated_at", Mon, 07 Apr 2014 07:23:48 UTC +00:00]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (4.6ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Mon, 07 Apr 2014 07:28:36 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$TOiFh5pmRVgNKEwWC4brxu96H9w3ll91uWwXyScMB.ppzVITc9HJO"], ["salt", "$2a$10$TOiFh5pmRVgNKEwWC4brxu"], ["updated_at", Mon, 07 Apr 2014 07:28:36 UTC +00:00]]
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
