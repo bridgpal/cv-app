@@ -300,3 +300,416 @@ Migrating to AddExpiresAtToUsers (20140407034731)
   [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 5) LIMIT 1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (2.6ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (6.5ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.4ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1
+  [1m[36mSQL (8.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 07:37:59 UTC +00:00], ["email", "harryworld@gmail.com"], ["fish", "$2a$10$RUvCbqfjiweLAcizWAWZ7eacWYJ8Pj.Cx0HvQ45CEvazvOhBDYsTy"], ["salt", "$2a$10$RUvCbqfjiweLAcizWAWZ7e"], ["updated_at", Tue, 08 Apr 2014 07:37:59 UTC +00:00]]
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 07:38:00 UTC +00:00], ["email", "harryworld@gmail.com"], ["fish", "$2a$10$iwpgxGEs/zhboct0enQloO1bUT9WOE5zolKqeA1QNBHJTt3rHpjyu"], ["salt", "$2a$10$iwpgxGEs/zhboct0enQloO"], ["updated_at", Tue, 08 Apr 2014 07:38:00 UTC +00:00]]
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 07:38:00 UTC +00:00], ["email", "harryworld@gmail.com"], ["fish", "$2a$10$fHWvStqY3eTEPnDxBPRU6OhtLNoZNZFJskqBgWsXQ7130Zg9U.h0y"], ["salt", "$2a$10$fHWvStqY3eTEPnDxBPRU6O"], ["updated_at", Tue, 08 Apr 2014 07:38:00 UTC +00:00]]
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 3) LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (2.8ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (13.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.3ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harryworld@gmail.com') LIMIT 1
+  [1m[36mSQL (8.8ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 07:38:25 UTC +00:00], ["email", "harryworld@gmail.com"], ["fish", "$2a$10$aCQvfbkwV.L4ptAUl5RrFOm5wgjb52KxGChI2BkUW.W0jFb1SRTJS"], ["salt", "$2a$10$aCQvfbkwV.L4ptAUl5RrFO"], ["updated_at", Tue, 08 Apr 2014 07:38:25 UTC +00:00]]
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE (LOWER("users"."email") = LOWER('harryworld@gmail.com') AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (26.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (8.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.3ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (6.1ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.3ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.5ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.2ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.7ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.3ms)
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 08:08:17 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$Zky.vl92zpGY/1rm/ZMU7.9Ii6TwLckTZaHfAQlkjP1gAttmO9cke"], ["salt", "$2a$10$Zky.vl92zpGY/1rm/ZMU7."], ["updated_at", Tue, 08 Apr 2014 08:08:17 UTC +00:00]]
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.3ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (4.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 08:09:05 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$1XSTQQ8uywQB4EY9dcuxx.Tq9CWm4CBFWI1QGBF0s5LEQmZ2T4TrO"], ["salt", "$2a$10$1XSTQQ8uywQB4EY9dcuxx."], ["updated_at", Tue, 08 Apr 2014 08:09:05 UTC +00:00]]
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.4ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (2.6ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.9ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 08:09:48 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$S/vP3GDDBMsSNEdBMxiQjOOm17iCzo.t5QrY0Fb3p9TN8CpposVfG"], ["salt", "$2a$10$S/vP3GDDBMsSNEdBMxiQjO"], ["updated_at", Tue, 08 Apr 2014 08:09:48 UTC +00:00]]
+Processing by UsersController#index as JSON
+  Rendered users/index.json.rabl (0.3ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.3ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (2.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.7ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 08:12:54 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$xa2y2wHcY6CmVgIMfRjUfOJF9KpK3F8TnwJtzOVBYktCipOWq0enW"], ["salt", "$2a$10$xa2y2wHcY6CmVgIMfRjUfO"], ["updated_at", Tue, 08 Apr 2014 08:12:54 UTC +00:00]]
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (2.9ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.8ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1
+  [1m[36mSQL (5.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 08 Apr 2014 08:17:15 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$FFnvNjPs.zkmzp8lsx26h.Yq8NjjTy7SlSVwwwr8MDEzRw3YRVZCi"], ["salt", "$2a$10$FFnvNjPs.zkmzp8lsx26h."], ["updated_at", Tue, 08 Apr 2014 08:17:15 UTC +00:00]]
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.3ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.5ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (3.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (11.7ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:40:28 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$jCVbDMiwNdFdO3j0hhSXL.WpyxYhPmvr/yBoqeHrYglrxZwhLwGjG"], ["salt", "$2a$10$jCVbDMiwNdFdO3j0hhSXL."], ["updated_at", Tue, 08 Apr 2014 09:40:28 UTC +00:00]]
+  [1m[36m (5.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.6ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.7ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.4ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:41:01 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$hmKurJwrwX.rIxStPtjZpumV2BdOcQkF60yGBWkX.ekvkbBUAcsq6"], ["salt", "$2a$10$hmKurJwrwX.rIxStPtjZpu"], ["updated_at", Tue, 08 Apr 2014 09:41:01 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (2.8ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (2.9ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (5.2ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:41:15 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$A4d6Gxi7R5ypybRtqJDM4uRihRfxtw1v7AfQKz9h.sGR9i7TT8r.6"], ["salt", "$2a$10$A4d6Gxi7R5ypybRtqJDM4u"], ["updated_at", Tue, 08 Apr 2014 09:41:15 UTC +00:00]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.5ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.7ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:42:00 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$SNyntnQY26Sohr4IUd5lT.74RQb65oz3/KIq0mzXLzbgP4QKzxK6y"], ["salt", "$2a$10$SNyntnQY26Sohr4IUd5lT."], ["updated_at", Tue, 08 Apr 2014 09:42:00 UTC +00:00]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendered users/show.json.rabl (0.7ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.1ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.2ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:42:55 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$V0cPpgvl1mexHsLfO6.iV.if76vO4TewV1fr6VBOzmRB9ch7E969u"], ["salt", "$2a$10$V0cPpgvl1mexHsLfO6.iV."], ["updated_at", Tue, 08 Apr 2014 09:42:55 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.4ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.2ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.5ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:43:16 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$sQaV7rGhRlX/33lhlEKZYelwGfsU6eTUIroin.V3kxfisf1Rl7NS2"], ["salt", "$2a$10$sQaV7rGhRlX/33lhlEKZYe"], ["updated_at", Tue, 08 Apr 2014 09:43:16 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.5ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL
+  [1m[36m (1.4ms)[0m  [1mselect table_name from information_schema.views where table_schema = 'cv-app_test'[0m
+  [1m[35m (9.7ms)[0m  TRUNCATE TABLE "users" RESTART IDENTITY CASCADE;
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "schema_migrations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('harry@ga.co') LIMIT 1[0m
+  [1m[35mSQL (4.4ms)[0m  INSERT INTO "users" ("created_at", "email", "fish", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 08 Apr 2014 09:43:25 UTC +00:00], ["email", "harry@ga.co"], ["fish", "$2a$10$qCqh8JDjSjRowE1mdnbUVOEHayYoIzzXJ1gc3TLLGUFYO6WWH3mi2"], ["salt", "$2a$10$qCqh8JDjSjRowE1mdnbUVO"], ["updated_at", Tue, 08 Apr 2014 09:43:25 UTC +00:00]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.json.rabl (3.5ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by UsersController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
