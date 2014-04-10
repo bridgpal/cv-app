@@ -1,1 +1,5 @@
 | Ember - Hello world.
+
+= each user in controller
+  h2= user.id
+  | {{{user.email}}}
