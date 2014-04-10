@@ -16,15 +16,15 @@ end
 
 group :development, :test do
   gem 'pry'
-	gem 'rspec-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
-	gem 'faker'
-	gem 'capybara'
-	gem 'database_cleaner'
-	gem 'launchy'
-	gem 'selenium-webdriver'
+  gem 'faker'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'selenium-webdriver'
 end
 
 gem 'bcrypt'
