@@ -10,6 +10,7 @@ gem 'rabl'
 gem 'oj'
 gem 'ember-rails'
 gem 'ember-source'
+gem 'emblem-rails'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
