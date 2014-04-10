@@ -23,6 +23,5 @@ Router = Backbone.Router.extend
         console.log x,y,z
 
 $ ->
-  router = new Router()
-  router.on()
+  new Router()
   Backbone.history.start pushState: false
