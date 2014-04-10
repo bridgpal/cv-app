@@ -5,6 +5,6 @@ $ ->
       url: 'api/users/1'
       success: (data, textStatus, jqXHR) ->
         $("#ajax_link").addClass('user')
-        $("#user").html(data.email)
+        $("#users").html(data.email)
 
       e.preventDefault()
