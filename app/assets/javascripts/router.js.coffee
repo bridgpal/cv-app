@@ -1,32 +1,28 @@
+
 Router = Backbone.Router.extend
   routes:
-    '':                 'showVitaes'
-    'vitaes':           'showVitaes'
-    'vitae/:id':        'showVitae'
+    'users':           'showUsers'
+    'users/:id':        'showUser'
 
-  showVitaes: ->
+  showUsers: ->
     console.log 'test'
-    # @showPage "/api/vitaes",
-      # Handlebars.templates.vitaes
+    @showPage "/api/users", HandlebarsTemplates['users/index']
 
-  showVitae: (id) ->
-    alert 'inside here'
-    console.log "tested"
-    console.log "vitaes"
-    console.log "show-vitaes"
-    # @showPage "/api/vitaes/#{id}",
-      # Handlebars.templates.vitae
+  showUser: (id) ->
+    console.log 'showUser'
+    @showPage "/api/users/#{id}", HandlebarsTemplates['users/show']
 
   showPage: (url, tmplFunc) ->
     $.ajax url,
       type: 'GET'
       data: 'json'
       success: (data) ->
-        $('#page-content').html(tmplFunc(data))
+        console.log data
+        $('body').html(tmplFunc(data))
       error: (x,y,z) ->
         console.log x,y,z
 
 $ ->
   router = new Router()
-  router.on
-  Backbone.history.start pushState: true, hashChange: false
+  router.on()
+  Backbone.history.start pushState: false
