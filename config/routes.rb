@@ -3,6 +3,9 @@ CvApp::Application.routes.draw do
   #root route here
   root 'site#index'
 
+  get 'users' => 'site#index'
+  get 'users/:id' => 'site#index'
+
   get  'login' => 'session#new'
   post 'login' => 'session#create'
 

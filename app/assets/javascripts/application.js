@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require user
-//= require_tree .
+//= require underscore
+//= require backbone
+//= require handlebars.runtime
+//= require_tree ./templates
+//= require router
